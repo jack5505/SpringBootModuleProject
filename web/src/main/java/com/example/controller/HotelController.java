@@ -18,7 +18,7 @@ public class HotelController {
 
     @Autowired
     private HotelRepository hotelRepository;
-    
+
     @RequestMapping(value = "/hotels",method = RequestMethod.GET)
     public List<Hotel> getHotels(){
       return hotelRepository.findAll();
