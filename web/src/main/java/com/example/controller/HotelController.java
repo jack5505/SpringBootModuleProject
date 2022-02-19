@@ -15,15 +15,17 @@ import java.util.List;
  **/
 
 @RestController
+@RequestMapping("/hotels")
 public class HotelController {
 
     @Autowired
     private HotelRepository hotelRepository;
 
-    @GetMapping(value = "/hotels")
+    @GetMapping
     public List<Hotel> getHotels(){
       return hotelRepository.findAll();
     }
+
 
 
 }
