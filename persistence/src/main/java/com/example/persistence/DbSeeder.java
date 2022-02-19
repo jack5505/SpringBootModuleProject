@@ -19,11 +19,9 @@ public class DbSeeder implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        List<Hotel> list = new ArrayList<>();
-        list.add(generateHOtel("jack",5,false));
-        list.add(generateHOtel("HayatRegency",4,true));
-        list.add(generateHOtel("Hilton",5,true));
-        hotelRepository.saveAll(list);
+        hotelRepository.save(generateHOtel("jack",5,false));
+        hotelRepository.save(generateHOtel("HayatRegency",4,true));
+        hotelRepository.save(generateHOtel("Hilton",5,true));
     }
 
     private Hotel generateHOtel(String name, int classification, boolean openClose){

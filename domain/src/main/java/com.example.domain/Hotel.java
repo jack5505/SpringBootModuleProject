@@ -1,14 +1,12 @@
 package com.example.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * @author Sabirov Jahongir
  **/
 @Entity
+@Table(name = "hotels")
 public class Hotel {
 
     @Id
